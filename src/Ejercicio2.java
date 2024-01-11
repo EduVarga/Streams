@@ -12,7 +12,7 @@ public class Ejercicio2 {
         personas.add(persona);
 
         long empiezaPorA = personas.stream()
-                .filter(person -> person.getLastName().startsWith("A"))
+                .filter(person -> "AÁÀÄaáàä".indexOf(person.getLastName().charAt(0)) != -1)
                 .count();
 
         System.out.println("Personas cuyo primer apellido comienza por 'A': " + empiezaPorA);
